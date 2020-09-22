@@ -83,39 +83,19 @@ onclick="dataLayer.push({'event' : 'CLiquesCheck',
 
 <p id="text" style="display:none">Checkbox is CHECKED!</p>
 
-<script>
-function myFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
-}
-</script>
+<script src="js/script1.js"></script>
+
+<script src="js/script2.js"></script>
 
 <script>
-    const banners = document.querySelectorAll("img");
 
-     for(const banner of banners) {
-      banner.addEventListener("click", callback);
-    }
-
-  function callback() {
-    const src = this.getAttribute("class");
-    alert("O banner clicado foi: " + src);
-  }
-
-</script>
-
-<script>
+  
   const fig = document.querySelectorAll("img")
   
   for(const f of fig) {
     
     f.addEventListener("click", function(i){
-      console.log("O banner clicado foi: ", f);
+      console.log("O banner clicado foi - TESTE B: ", f);
     })
     
   }
