@@ -2,6 +2,7 @@
 const banners = document.querySelectorAll("img");
 
 for(const banner of banners) {
+    
  banner.addEventListener("click", callback);
 }
 
