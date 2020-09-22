@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+  
+<script> 
+dataLayer = [];
+</script> 
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+  
+  <h3> Testando clicks em imagens </h3>
+  
+  <div>
+    <img class='img1' src="imagens/data-science.png" 
+    
+    onclick="dataLayer.push({'event' : 'CLiquesBanners',
+    'eventCategory':'Imagens:Banners',
+    'eventAction':'Apenas cliques',
+    'eventLabel':'Banner:Position-0'});"
+    
+    alt="Imagem do banco de dados" 
+    title='Figura 1' border="3" 
+    width="150" height="150">
+     
+     <img class='img2' src="imagens/image01.jpg"
+     
+    onclick="dataLayer.push({'event' : 'CLiquesBanners',
+    'eventCategory':'Imagens:Banners',
+    'eventAction':'Apenas cliques',
+    'eventLabel':'Banner:Position-1'});"
+     
+     alt="Imagem do banco de dados"
+     title='Figura 2' border="3"
+     width="150" height="150"> 
+
+     <img class='img3' src="imagens/image02.jpg" 
+     
+    onclick="dataLayer.push({'event' : 'CLiquesBanners',
+    'eventCategory':'Imagens:Banners',
+    'eventAction':'Apenas cliques',
+    'eventLabel':'Banner:Position-2'});"
+    
+     alt="Imagem do banco de dados"
+     title='Figura 3' border="3" 
+     width="150" height="150">
+  </div>
+
+<h3> Testando clicks em botões </h3>
+
+<button id = "botao"    
+onclick="dataLayer.push({'event' : 'CLiquesBotao',
+    'eventCategory':'Botoes:clique',
+    'eventAction':'Cliques:botoes',
+    'eventLabel':'Botao:position-1'});"> Clique Aqui </button>
+
+
+<h3> Testando clicks de Checkbox</h3>
+
+<input type="checkbox" id="myCheck" checked="checked" 
+onclick="dataLayer.push({'event' : 'CLiquesCheck',
+    'eventCategory':'Check:clique',
+    'eventAction':'Cliques:Check',
+    'eventLabel':'Check:position-1'});">
+
+<label class="container">One
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+
+<label for="myCheck">Checkbox:</label> 
+<input type="checkbox" id="myCheck" onclick="myFunction()">
+
+<p id="text" style="display:none">Checkbox is CHECKED!</p>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+<script>
+    const banners = document.querySelectorAll("img");
+
+     for(const banner of banners) {
+      banner.addEventListener("click", callback);
+    }
+
+  function callback() {
+    const src = this.getAttribute("class");
+    alert("O banner clicado foi: " + src);
+  }
+
+</script>
+
+<script>
+  const fig = document.querySelectorAll("img")
+  
+  for(const f of fig) {
+    
+    f.addEventListener("click", function(i){
+      console.log("O banner clicado foi: ", f);
+    })
+    
+  }
+  
+</script>
+
+
+
+</body>
+
+
+</html>
