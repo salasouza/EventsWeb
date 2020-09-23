@@ -1,7 +1,7 @@
-var banners = document.querySelectorAll(".banner");
-console.log(banners); 
+var ban = document.querySelectorAll(".banner");
+console.log(ban); 
 
- for(const banner of banners) {
+ for(const banner of ban) {
   banner.addEventListener("click", callback);
 }
 
